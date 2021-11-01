@@ -27,15 +27,17 @@
       }
 
       attributeChangedCallback(attrName, oldVal, newVal) {
-        // you code here
+        if (newVal == oldVal || newVal == this.name) return // prevent updating when the value is the same (causes an update loop)
+        this.name = newVal
+        this.update()
       }
 
       update() {
-        // you code here
+        this.shadowRoot.querySelector('#content').textContent = `Hello, ${this.name}`
       }
 
       static get observedAttributes() {
-        // you code here
+        return ['name']
       }
     }
 
