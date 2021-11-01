@@ -1,0 +1,18 @@
+# system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+
+# environment variables
+.env
+.env.*
+!.env.sample
+
+# dependency, extensions & other
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+node_modules/
